@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f1f0; /* Fondo rosa pastel claro */
+  color: #6b5b95; /* Texto lavanda oscuro */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar todo el contenido horizontalmente */
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffb6c1; /* Rosa pastel */
+  color: #6b5b95; /* Texto lavanda oscuro */
+  width: 100%; /* Ocupar todo el ancho */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Siempre 3 imágenes por fila */
+  gap: 10px; /* Espacio entre imágenes */
+  padding: 20px;
+  max-width: 1200px; /* Ancho máximo para pantallas grandes */
+  width: 100%; /* Ocupar el 100% del ancho disponible */
+  margin: 0 auto; /* Centrar la galería */
+  box-sizing: border-box; /* Incluir padding en el ancho total */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #ffb6c1; /* Borde rosa pastel */
+  display: flex;
+  justify-content: center; /* Centrar contenido horizontalmente */
+  align-items: center; /* Centrar contenido verticalmente */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.gallery-item:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 182, 193, 0.7); /* Overlay rosa pastel semitransparente */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 10px 10px; /* Bordes redondeados solo en la parte inferior */
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffb6c1; /* Rosa pastel */
+  color: #6b5b95; /* Texto lavanda oscuro */
+  margin-top: 20px;
+  width: 100%; /* Ocupar todo el ancho */
+}
+
+/* Media Queries para ajustes específicos */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila en móviles */
+    gap: 5px; /* Espacio más pequeño en móviles */
+    padding: 10px; /* Reducir el padding en móviles */
+  }
+
+  header h1 {
+    font-size: 2rem; /* Tamaño de fuente más pequeño */
+  }
+
+  header p {
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+  }
+}
+
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  border: 5px solid #ffb6c1; /* Borde rosa pastel */
+  display: flex;
+  justify-content: center; /* Centrar contenido horizontalmente */
+  align-items: center; /* Centrar contenido verticalmente */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.gallery-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
