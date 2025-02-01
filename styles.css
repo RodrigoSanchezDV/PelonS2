@@ -143,6 +143,42 @@ footer {
 /* Estilos para la sección del código secreto */
 /* Estilos para la sección del código secreto */
 /* Estilos para la sección del código secreto */
+/* Estilos generales */
+/* Estilos generales */
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f1f0; /* Fondo rosa pastel claro */
+  color: #6b5b95; /* Texto lavanda oscuro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centrar verticalmente */
+  min-height: 100vh; /* Ocupar toda la altura de la pantalla */
+  text-align: center;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffb6c1; /* Rosa pastel */
+  color: #6b5b95;
+  width: 100%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Sección del código secreto */
 .secret-code-section {
   text-align: center;
   margin: 40px 0;
@@ -153,6 +189,7 @@ footer {
   color: #6b5b95;
 }
 
+/* Input centrado */
 .secret-code-section input {
   padding: 10px;
   font-size: 1rem;
@@ -161,6 +198,7 @@ footer {
   margin-right: 10px;
 }
 
+/* Botón centrado */
 .secret-code-section button {
   padding: 10px 20px;
   font-size: 1rem;
@@ -176,13 +214,19 @@ footer {
   background-color: #ff69b4;
 }
 
-/* Estilos para la animación de la pregunta */
+/* Animación de la pregunta */
 #valentine-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin: 40px 0;
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  width: 100%;
+  max-width: 400px;
 }
 
 #valentine-question.visible {
@@ -209,6 +253,8 @@ footer {
 }
 
 .buttons {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -240,7 +286,7 @@ footer {
   background-color: #4b3d6d;
 }
 
-/* Estilos para la animación de pantalla completa */
+/* Animación de pantalla completa */
 #fullscreen-animation {
   position: fixed;
   top: 0;
@@ -256,11 +302,12 @@ footer {
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none; /* No bloquear clics cuando está oculto */
+  text-align: center;
 }
 
 #fullscreen-animation.visible {
   opacity: 1;
-  pointer-events: auto; /* Permitir clics cuando está visible */
+  pointer-events: auto;
 }
 
 #fullscreen-animation h2 {
