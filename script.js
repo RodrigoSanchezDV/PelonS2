@@ -60,3 +60,55 @@ galleryItems.forEach(item => {
     item.style.transform = 'scale(1) rotate(0deg)'; // Volver al estado original
   });
 });
+
+
+
+// Seleccionar elementos del DOM
+// Seleccionar elementos del DOM
+const secretCodeInput = document.getElementById('secret-code');
+const submitCodeButton = document.getElementById('submit-code');
+const valentineQuestion = document.getElementById('valentine-question');
+const fullscreenAnimation = document.getElementById('fullscreen-animation');
+
+// Código secreto correcto
+const correctCode = "TEAMO";
+
+// Validar el código ingresado
+submitCodeButton.addEventListener('click', () => {
+  const userCode = secretCodeInput.value.trim().toUpperCase();
+
+  if (userCode === correctCode) {
+    // Mostrar la animación de la pregunta
+    valentineQuestion.classList.remove('hidden');
+    valentineQuestion.classList.add('visible');
+  } else {
+    alert("Código incorrecto. ¡Intenta de nuevo!");
+  }
+});
+
+// Respuesta a la pregunta
+const yesButton = document.getElementById('yes-button');
+const noButton = document.getElementById('no-button');
+
+yesButton.addEventListener('click', () => {
+  // Ocultar la pregunta y mostrar la animación de pantalla completa
+  valentineQuestion.classList.remove('visible');
+  valentineQuestion.classList.add('hidden');
+  fullscreenAnimation.classList.remove('hidden');
+  fullscreenAnimation.classList.add('visible');
+});
+
+noButton.addEventListener('click', () => {
+  alert("¡Oh no! 😢 Pero seguiré intentándolo...");
+});
+
+
+
+
+
+
+
+
+
+
+
