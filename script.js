@@ -71,7 +71,7 @@ const valentineQuestion = document.getElementById('valentine-question');
 const fullscreenAnimation = document.getElementById('fullscreen-animation');
 
 // Código secreto correcto
-const correctCode = "TEAMO";
+const correctCode = "19032024";
 
 // Validar el código ingresado
 submitCodeButton.addEventListener('click', () => {
